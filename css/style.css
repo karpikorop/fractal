@@ -1,0 +1,83 @@
+.mainDiv{
+    margin: auto;
+    margin-top: 5%;
+    justify-content: center;
+    display: flex;
+}
+.fractal{
+    border: 2px solid white;
+}
+.fractal:hover{
+    cursor: zoom-in;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-bottom: 0;
+    height: 100%;
+    padding: 2em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    
+    border-left: 1px;
+    border-right: 2px;
+    border-top: 2px;
+    border-bottom: 2px;
+    border-style: solid;
+    border-color: white;
+    width: 25rem;
+    background: black;
+    align-content: space-between;
+}
+.iter{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    border-color: white;
+    color: white;
+    min-width: 100%;
+}
+.iter:focus{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.secondLabel{
+    color: #6c757d;
+}
+.formHeader{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.sbutton{
+    margin-top: 1em;
+    height: 2.5em;
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    background: white;
+    color: black;
+    transition: 0.2s;
+}
+.sbutton:hover{
+    
+    color: white;
+    background: black;
+}
+.helpLink{
+    color:  #6c757d;
+    text-decoration-color: #6c757d;
+}
