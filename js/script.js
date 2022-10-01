@@ -11,15 +11,15 @@ var context = canvas.getContext('2d');
 var w = canvas.width;
 var h = canvas.height;
 
-function submitFunc(){
-    
+document.getElementById("form1").addEventListener('submit', function submitFunc(e){
+    e.preventDefault();
     xmin=-2,ymin=-1.2,scale=250;
     document.getElementById("sbutton").innerHTML = "...Fractal Drawing...";
     iterations = document.getElementById("iterations").value;
     outerColor = document.getElementById("exampleColorInput1").value;
     innerColor = document.getElementById("exampleColorInput2").value;
     window.setTimeout(mandel, 10);
-}
+});
 
 function showAlert(){
     alert("That was really slow!");
