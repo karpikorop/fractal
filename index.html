@@ -7,7 +7,7 @@
     <body class="bg-black">
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container-fluid" style="padding: 0">
-                <a class="navbar-brand" href="#" style="margin: 0; padding: 0">
+                <a class="navbar-brand" href="index.html" style="margin: 0; padding: 0">
                     <img src="sprites/logo.png" alt="logo" width="50" height="50" style="margin: 0; padding: 0" />
                 </a>
                 <button
@@ -22,9 +22,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="#"> Tools </a>
-                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="#">Lessons</a>
-                        <a class="nav-link fs-5 fw-lighter" href="#"> Help </a>
+                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="tools.html"> Tools </a>
+                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="lessons.html">Lessons</a>
+                        <a class="nav-link fs-5 fw-lighter" href="help.html"> Help </a>
                     </div>
                 </div>
             </div>
@@ -38,13 +38,11 @@
                 <div style="display: flex; justify-content: space-between; margin-top: 1em">
                     <button type="button" class="defButton fs-4 fw-lighter">Learn</button>
                     <span class="downSlogan" style="display: flex; margin: auto; margin-left: 0.5em; margin-right: 0.5em"> or </span>
-                    <a href="fractal.html">
-                        <button type="button" class="revButton fs-4 fw-lighter">Create</button>
-                    </a>
+                    <button type="button" class="revButton fs-4 fw-lighter" onclick="goToTools()">Create</button>
                 </div>
             </div>
         </div>
-
+        <script src="js/links.js"></script>
         <script src="js/bootstrap.js"></script>
     </body>
 </html>
