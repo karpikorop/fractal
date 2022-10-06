@@ -1,57 +1,50 @@
 <html>
-<header>
-<link rel="stylesheet" href="css/style.css" />
-<link href="css/bootstrap.css" rel="stylesheet">
+    <header>
+        <title>FractalFuntrion</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="css/bootstrap.css" rel="stylesheet" />
+    </header>
+    <body class="bg-black">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid" style="padding: 0">
+                <a class="navbar-brand" href="#" style="margin: 0; padding: 0">
+                    <img src="sprites/logo.png" alt="logo" width="50" height="50" style="margin: 0; padding: 0" />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="#"> Tools </a>
+                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="#">Lessons</a>
+                        <a class="nav-link fs-5 fw-lighter" href="#"> Help </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-</header>
-<body onload="mandel()" class="bg-black">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <div class="container-fluid" style="padding: 0;">
-          <a class="navbar-brand" href="#" style="margin: 0; padding: 0;"> 
-            <img src="sprites/logo.png" alt="logo" width="50" height="50" style="margin: 0; padding: 0;">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link fs-5 fw-lighter" aria-current="page" href="#">Tools</a>
-              <a class="nav-link fs-5 fw-lighter" aria-current="page" href="#">Lessons</a>
-              <a class="nav-link fs-5 fw-lighter" href="#">Help</a>
+        <div class="main2">
+            <img src="sprites/fractal.jpg" class="yakor" alt="fractal" />
+            <div class="sloganDiv">
+                <h1 class="slogan">Build fractals, learn lesson take the tests, and more.</h1>
+                <span class="downSlogan">You can start taking interactive lessons or use the tools provided to you right away.</span>
+                <div style="display: flex; justify-content: space-between; margin-top: 1em">
+                    <button type="button" class="defButton fs-4 fw-lighter">Learn</button>
+                    <span class="downSlogan" style="display: flex; margin: auto; margin-left: 0.5em; margin-right: 0.5em"> or </span>
+                    <a href="fractal.html">
+                        <button type="button" class="revButton fs-4 fw-lighter">Create</button>
+                    </a>
+                </div>
             </div>
-          </div>
-        </div>
-      </nav>
-
-    <div class="mainDiv">
-        <canvas id="myCanvas" class="fractal" width="800" height="600"></canvas>
-        <form class="form" id="form1">
-            <div class="formHeader">
-                <h1 class="fs-2 text-light" style="margin: 0;" id="mndl">Build Mandelbrot Set</h1>
-                <span class="fs-5 secondLabel fw-lighter">f(z) = z<sup>2</sup> + c</span>
-            </div>
-            <div class="mb-3">
-              <label for="iterations" class="form-label text-light fs-5" id="numiter">Number of Iterations</label>
-              <input type="number" class="iter" id="iterations" min="5" max="150" required value="25">
-              <div id="emailHelp" class="form-text">We recoment 25-100 iterations</div>
-            </div>
-            <div class="mb-3 colorPickerDiv">
-                <label for="exampleColorInput" class="form-label text-light fs-5">Color picker</label>
-                <br>
-                <label for="exampleColorInput1" class="form-label secondLabel">Outside color</label>
-                <input type="color" class="form-control form-label form-control-color" 
-                id="exampleColorInput1" value="#ffae00">
-                <label for="exampleColorInput2" class="form-label secondLabel">Inside color</label>
-                <input type="color" class="form-control form-control-color" 
-                id="exampleColorInput2" value="#000">
-            </div>
-            <button type="submit" class="sbutton fs-4 fw-lighter" id="sbutton" onclick="submitFunc()">Draw</button>
-            <a style="width: 100%;" href="#" class="helpLink"><p style="text-align: right;">Need Help?</p></a>
-          </form>
         </div>
 
-<script src="js/bootstrap.js"></script>
-<script src="js/script.js"></script>
-</body>
+        <script src="js/bootstrap.js"></script>
+    </body>
 </html>
