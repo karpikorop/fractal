@@ -1,0 +1,65 @@
+<html>
+    <header>
+        <title>FractalFuntrion Mandelbrot</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+    </header>
+    <body class="bg-black">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid" style="padding: 0">
+                <a class="navbar-brand" href="index.html" style="margin: 0; padding: 0">
+                    <img src="sprites/logo.png" alt="logo" width="50" height="50" style="margin: 0; padding: 0" />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="tools.html">Tools</a>
+                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="lessons.html">Lessons</a>
+                        <a class="nav-link fs-5 fw-lighter" href="help.html"> Help </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mainDiv">
+            <canvas id="myCanvas" class="fractal" width="800" height="600"></canvas>
+            <form class="form" id="form1">
+                <div class="formHeader">
+                    <h1 class="fs-2 text-light" style="margin: 0" id="mndl">Change Color Model</h1>
+                    <span class="fs-5 secondLabel fw-lighter"> and Lightness </span>
+                </div>
+
+                <div class="mb-3" style="width: 100%">
+                    <label for="exampleColorInput" class="form-label text-light fs-5" style="width: 100%"> Import Image</label>
+                    <label for="file" class="form-label secondLabel" id="numiter">from your device</label>
+                    <div class="mb-3" style="width: 100%; display: flex">
+                        <label for="file" class="defButton" style="width: 60%; display: flex">
+                            <span style="margin: auto">Choose Image</span>
+                        </label>
+                        <input class="fileInput" placeholder="No image choosen" readonly />
+                        <input type="file" style="width: 100%; display: none" id="file" name="file" onchange="importFile()" />
+                    </div>
+                    <label for="iterations" class="form-label secondLabel" id="numiter">or by URL</label>
+                    <div class="mb-3" style="width: 100%; display: flex">
+                        <button type="submit" class="defButton" style="width: 60%" onclick="importLink()">Load</button>
+                        <input type="url" class="urlInput" id="urlInput" value="" placeholder="www.image.com/dog" required />
+                    </div>
+                </div>
+
+                <a style="width: 100%" href="#" class="helpLink"><p style="text-align: right">Need Help?</p></a>
+            </form>
+        </div>
+
+        <script src="js/bootstrap.js"></script>
+        <script src="js/color.js"></script>
+    </body>
+</html>

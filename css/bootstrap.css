@@ -2198,8 +2198,8 @@ progress {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
+    color: #6c757d;
+    background-color: rgb(0, 0, 0);
     background-clip: padding-box;
     border: 1px solid #ced4da;
     -webkit-appearance: none;
