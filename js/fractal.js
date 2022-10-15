@@ -7,7 +7,7 @@ var color;
 var outerColor = "#ffae00";
 var innerColor = "#000";
 var iterations = 25;
-var canvas = document.getElementById("myCanvas");
+var canvas = document.getElementById("fractal");
 canvas.addEventListener("click", zoom, false);
 var context = canvas.getContext("2d");
 var w = canvas.width;
@@ -16,14 +16,19 @@ var h = canvas.height;
 document.getElementById("form1").addEventListener("submit", function submitFunc(e) {
     e.preventDefault();
     (xmin = -2), (ymin = -1.2), (scale = 250);
+    document.body.style.cursor = "wait";
+    document.body.classList.add("inheritCursors");
     document.getElementById("sbutton").innerHTML = "...Fractal Drawing...";
     iterations = document.getElementById("iterations").value;
     outerColor = document.getElementById("exampleColorInput1").value;
     innerColor = document.getElementById("exampleColorInput2").value;
-    window.setTimeout(mandel, 10);
+    window.setTimeout(mandel, 20);
 });
 
 function zoom(event) {
+    document.body.style.cursor = "wait";
+    document.body.classList.add("inheritCursors");
+
     var rect = canvas.getBoundingClientRect();
     var xPos = event.clientX - rect.left;
     var yPos = event.clientY - rect.top;
@@ -34,7 +39,8 @@ function zoom(event) {
     scale = scale * 2;
 
     document.getElementById("sbutton").innerHTML = "...Fractal Drawing...";
-    window.setTimeout(mandel, 10);
+
+    window.setTimeout(mandel, 20);
 }
 
 function mandel() {
@@ -68,6 +74,8 @@ function mandel() {
             context.fill();
         }
     }
+    document.body.style.cursor = "default";
+    document.body.classList.remove("inheritCursors");
     document.getElementById("sbutton").innerHTML = "Draw";
 }
 function hexToHSL(H, i) {

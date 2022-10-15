@@ -1,9 +1,11 @@
 <html>
-    <header>
-        <title>FractalFuntrion Mandelbrot</title>
+    <head>
+        <title>Change Color Models</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/sprites/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/sprites/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
-    </header>
+    </head>
     <body class="bg-black">
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container-fluid" style="padding: 0">
@@ -31,31 +33,43 @@
         </nav>
 
         <div class="mainDiv">
-            <canvas id="myCanvas" class="fractal" width="800" height="600"></canvas>
+            <canvas id="imgCanvas" class="canvas" width="800" height="600"></canvas>
             <form class="form" id="form1">
                 <div class="formHeader">
-                    <h1 class="fs-2 text-light" style="margin: 0" id="mndl">Change Color Model</h1>
+                    <h1 class="fs-2 text-light" style="margin: 0" id="info">Change Color Model</h1>
                     <span class="fs-5 secondLabel fw-lighter"> and Lightness </span>
                 </div>
 
-                <div class="mb-3" style="width: 100%">
-                    <label for="exampleColorInput" class="form-label text-light fs-5" style="width: 100%"> Import Image</label>
+                <div style="width: 100%">
+                    <label for="exampleColorInput" class="text-light fs-5" style="width: 100%"> Import Image</label>
                     <label for="file" class="form-label secondLabel" id="numiter">from your device</label>
                     <div class="mb-3" style="width: 100%; display: flex">
                         <label for="file" class="defButton" style="width: 60%; display: flex">
-                            <span style="margin: auto">Choose Image</span>
+                            <span style="margin: auto">Import</span>
                         </label>
                         <input class="fileInput" placeholder="No image choosen" readonly />
                         <input type="file" style="width: 100%; display: none" id="file" name="file" onchange="importFile()" />
                     </div>
-                    <label for="iterations" class="form-label secondLabel" id="numiter">or by URL</label>
+                    <label for="iterations" class="form-label secondLabel" id="numiter2">or by URL (temporary unavailable)</label>
                     <div class="mb-3" style="width: 100%; display: flex">
-                        <button type="submit" class="defButton" style="width: 60%" onclick="importLink()">Load</button>
-                        <input type="url" class="urlInput" id="urlInput" value="" placeholder="www.image.com/dog" required />
+                        <button disabled type="button" class="defButton" style="width: 60%" onclick="importLink()" id="load">Load</button>
+                        <input disabled type="url" class="urlInput" id="urlInput" value="" placeholder="www.image.com/dog" required />
                     </div>
                 </div>
+                <label for="iterations" class="text-light fs-5" id="numiter2">Color Model</label>
 
-                <a style="width: 100%" href="#" class="helpLink"><p style="text-align: right">Need Help?</p></a>
+                <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons" style="width: 100%; display: flex">
+                    <label class="defButton2" id="l1"> <input type="radio" name="options" id="option1" onclick="radioClick(this)" value="1" checked /> RGB </label>
+                    <label class="revButton2" id="l2"> <input type="radio" name="options" id="option2" onclick="radioClick(this)" value="2" /> CMYK </label>
+                    <label class="revButton2" id="l3"> <input type="radio" name="options" id="option3" onclick="radioClick(this)" value="3" /> HSL </label>
+                </div>
+                <label for="range" class="text-light fs-5">Lightness</label>
+                <div class="rangeDiv">
+                    <input class="range" id="range" type="range" value="0" min="-100" max="100" oninput="rangevalue.value=value" onchange="lightnessChange(this)" />
+                    <output id="rangevalue" class="secondLabel" style="width: auto; text-align: right">0</output>
+                </div>
+                <label for="iterations" class="form-label secondLabel" id="numiter2">works only in HSL mode</label>
+                <p style="text-align: right; width: 100%; margin: 0"><a href="#" class="helpLink">Need Help?</a></p>
             </form>
         </div>
 
