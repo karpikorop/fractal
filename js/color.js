@@ -13,7 +13,6 @@ document.getElementById("form1").addEventListener("submit", function submitFunc(
 });
 function lightnessChange(range) {
     lightness = range.value;
-    document.getElementById("info").innerText = lightness;
     if (radioPos == 3) {
         document.body.style.cursor = "wait";
         document.body.classList.add("inheritCursors");
