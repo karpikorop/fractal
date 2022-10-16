@@ -9,7 +9,7 @@
 }
 .canvas {
     background: #9f9f9f;
-    background-image: url("/sprites/importImage.jpg");
+    background-image: url("sprites/importImage.jpg");
     border: 2px solid white;
 }
 #fractal:hover {
