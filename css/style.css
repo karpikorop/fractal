@@ -17,10 +17,10 @@
     border: 2px solid white;
 }
 #imgCanvas{
-    background-image: url("/sprites/importImage.jpg");
+    background-image: url("../sprites/importImage.jpg");
 }
 #affine{
-    background-image: url("/sprites/coordinatePlane.jpg");
+    background: url("../sprites/coordinatePlane.jpg");
 }
 #fractal:hover {
     cursor: zoom-in;
