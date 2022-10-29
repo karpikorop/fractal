@@ -18,7 +18,7 @@ document.getElementById("form1").addEventListener("submit", function submitFunc(
     (xmin = -2), (ymin = -1.2), (scale = 250);
     document.body.style.cursor = "wait";
     document.body.classList.add("inheritCursors");
-    document.getElementById("sbutton").innerHTML = "...Fractal Drawing...";
+    document.getElementById("DrawButton").innerHTML = "...Fractal Drawing...";
     iterations = document.getElementById("iterations").value;
     outerColor = document.getElementById("exampleColorInput1").value;
     innerColor = document.getElementById("exampleColorInput2").value;
@@ -38,7 +38,7 @@ function zoom(event) {
 
     scale = scale * 2;
 
-    document.getElementById("sbutton").innerHTML = "...Fractal Drawing...";
+    document.getElementById("DrawButton").innerHTML = "...Fractal Drawing...";
 
     window.setTimeout(mandel, 20);
 }
@@ -76,7 +76,7 @@ function mandel() {
     }
     document.body.style.cursor = "default";
     document.body.classList.remove("inheritCursors");
-    document.getElementById("sbutton").innerHTML = "Draw";
+    document.getElementById("DrawButton").innerHTML = "Draw";
 }
 function hexToHSL(H, i) {
     // Convert hex to RGB first

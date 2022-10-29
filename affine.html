@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Affine Transformation</title>
+        <link rel="shortcut icon" type="image/x-icon" href="sprites/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body class="bg-black">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid" style="padding: 0">
+                <a class="navbar-brand" href="index.html" style="margin: 0; padding: 0">
+                    <img src="sprites/logo.png" alt="logo" width="50" height="50" style="margin: 0; padding: 0" />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="tools.html">Tools</a>
+                        <a class="nav-link fs-5 fw-lighter" aria-current="page" href="lessons.html">Lessons</a>
+                        <a class="nav-link fs-5 fw-lighter" href="help.html"> Help </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mainDiv">
+            <canvas id="affine" class="canvas" width="800" height="600"></canvas>
+            <form class="form" id="form1">
+                <div class="formHeader">
+                    <h1 class="fs-2 text-light" style="margin: 0" id="info">Affine Transformation</h1>
+                    <span class="fs-5 secondLabel fw-lighter"> Rotate and Move </span>
+                </div>
+
+                
+                <span class="form-label text-light fs-4" id="numiter" style="width: 100%; ">Form a Square </span>
+                <div class="" style="width: 100%">
+                    
+                    
+                    <span class="fs-5 fw-lighter secondLabel" id="numiter" style="width: 100%">First Coordinate</span>
+
+                    <div class="coordinates">
+                        <div class="coordinate">
+                        <label for="point1" class="text-light fs-6" id="numiter">X:</label>
+                        <input type="number" class="points" id="point1X" min="-400" max="400" required value="50" />
+                        </div>
+                        <div class="coordinate">
+                        <label for="point1" class="text-light fs-6" id="numiter">Y:</label>
+                        <input type="number" class="points" id="point1Y" min="-300" max="300" required value="50" />
+                        </div>
+                    </div>
+                    <span class="form-label secondLabel fs-5 fw-lighter" id="numiter" style="width: 100%;">Second Coordinate</span>
+                    <div class="coordinates"> 
+                        <div class="coordinate">
+                        <label for="point1" class="text-light fs-6" id="numiter">X:</label>
+                        <input type="number" class="points" id="point2X" min="-400" max="400" required value="-50" />
+                        </div>
+                        <div class="coordinate">
+                        <label for="point1" class="text-light fs-6" id="numiter">Y:</label>
+                        <input type="number" class="points" id="point2Y" min="-300" max="300" required value="-50" />
+                        </div>
+                    </div>
+                    <div class="form-text">Recommended Coordinates from -250 to +250</div>
+                    <div id="shapeColor">
+                        <label for="exampleColorInput" class="form-label text-light fs-5">Shape Color</label>
+                    
+                        <input type="color" class="form-control form-label form-control-color" id="exampleColorInput" value="#d84b4b" />
+                    </div>
+                </div>
+                <button type="submit" class="sbutton defButton fs-4 fw-lighter" id="rotateButton" onclick="stopMoving()">Start</button>
+                <p style="text-align: right; width: 100%; margin: 0"><a href="#" class="helpLink">Need Help?</a></p>
+            </form>
+        </div>
+
+        <script src="js/bootstrap.js"></script>
+        <script src="js/affine.js"></script>
+    </body>
+</html>

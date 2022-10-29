@@ -1,3 +1,6 @@
+:root{
+    --secondary-color: #6c757d;
+}
 .mainDiv {
     margin-inline: auto;
     align-content: space-between;
@@ -9,15 +12,18 @@
 }
 .canvas {
     background: #9f9f9f;
-    background-image: url("sprites/importImage.jpg");
+    margin-left: 0;
+    margin-bottom: 3em;
     border: 2px solid white;
+}
+#imgCanvas{
+    background-image: url("/sprites/importImage.jpg");
+}
+#affine{
+    background-image: url("/sprites/coordinatePlane.jpg");
 }
 #fractal:hover {
     cursor: zoom-in;
-}
-.canvas {
-    margin-left: 0;
-    margin-bottom: 3em;
 }
 .form {
     display: flex;
@@ -52,8 +58,39 @@
 }
 .iter:focus {
     border: none;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--secondary-color);
 }
+
+.points {
+    background: none;
+    border: none;
+    
+    
+    color: white;
+    text-align: right;
+    width: 2.5em;
+
+    margin: 0;
+
+}
+.coordinates{
+    display: flex;
+    
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    
+}
+#shapeColor{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.coordinate{
+    margin-right: 2em;
+    padding-left: 0.2em;
+    width: 4em;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -67,7 +104,7 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 .secondLabel {
-    color: #6c757d;
+    color: var(--secondary-color);
 }
 .formHeader {
     margin: auto;
@@ -75,7 +112,7 @@ input[type="number"] {
     margin-bottom: 1em;
 }
 .sbutton {
-    margin-top: 1em;
+    
     width: 100%;
 }
 .defButton {
@@ -137,11 +174,11 @@ input[type="number"] {
     cursor: pointer;
 }
 .helpLink {
-    color: #6c757d;
-    text-decoration-color: #6c757d;
+    color: var(--secondary-color);
+    text-decoration-color: var(--secondary-color);
 }
 a.helpLink:hover {
-    color: #6c757d;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 .yakor {

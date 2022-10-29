@@ -48,7 +48,7 @@ function imgToHSL() {
 
             let hsl = rgbToHSL(rgb);
 
-            hsl.l += Math.round(lightness);
+            if (hsl.s <= 15 && hsl.l > 3 && hsl.l < 90) hsl.l += Math.round(lightness);
 
             context.beginPath();
             context.rect(x, y, 1, 1);
@@ -128,11 +128,19 @@ function importFile() {
         canvas.width = canvas.height / imgRatio;
         context.drawImage(img, 0, 0, canvas.width, canvas.height);
     };
-    img.src = filename.value;
+    //img.src = filename.value;
 
     const file = document.querySelector("input[type=file]").files[0];
 
     const reader = new FileReader();
+
+    //if file exist
+    if (file) {
+        reader.readAsDataURL(file);
+    } else {
+        canvas.width = 800;
+        document.getElementsByClassName("fileInput")[0].placeholder = "No image choosen";
+    }
 
     reader.addEventListener(
         "load",
@@ -142,10 +150,6 @@ function importFile() {
         },
         false
     );
-
-    if (file) {
-        reader.readAsDataURL(file);
-    }
 }
 function importLink() {
     //https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg
