@@ -6,10 +6,20 @@ context.translate(400, 300);
 let point1 = new Coordinate(0, 0);
 let point2 = new Coordinate(0, 0);
 let square;
-let shapeColor;
+let shapeColor = "#d84b4b";
 let isMoving = false;
 
-
+window.onload = (event) => {
+    context.clearRect(-400, -300, canvas.width, canvas.height);
+    context.beginPath();
+    context.moveTo(50, 50);
+    context.lineTo(50, -50);
+    context.lineTo(-50, -50);
+    context.lineTo(-50, 50);
+    context.fillStyle = "#d84b4b";
+    context.fill();
+    context.closePath();
+};
 
 document.getElementById("form1").addEventListener("submit", function submitFunc(e) {
     e.preventDefault();
@@ -28,21 +38,32 @@ document.getElementById("form1").addEventListener("submit", function submitFunc(
     }
     shapeColor = document.getElementById("exampleColorInput").value;
     square = CalculateSquareAngles(point1, point2);
-    //document.getElementById("info").innerText = d.x + " " + d.y;
+    //document.getElementById("info").innerText = point1.x + " " + point2.y;
     isMoving = true;
 
-
-    document.getElementById("rotateButton").innerHTML = "Stop";
     drawSquare();
+    document.getElementById("rotateButton").innerHTML = "Stop";
+    window.setTimeout(drawAndRotateSquare, 300);
 });
 
 
-function stopMoving(){
-    
+function drawAndRotateSquare(){
+
+    drawSquare();
+    if(square.getMiddle().y > 400 || isMoving == false){
+        document.getElementById("rotateButton").innerHTML = "Start";
+        isMoving = false;
+        if(square.getMiddle().y > 400){
+            square = CalculateSquareAngles(point1, point2);
+            drawSquare();
+        }
+        return;
+    }
+    rotateSquare();
+    window.setTimeout(drawAndRotateSquare, 20);
 }
 
 function drawSquare(){
-    
     context.clearRect(-400, -300, canvas.width, canvas.height);
     context.beginPath();
     context.moveTo(square.a.x, square.a.y);
@@ -52,13 +73,6 @@ function drawSquare(){
     context.fillStyle = shapeColor;
     context.fill();
     context.closePath();
-    if(square.getMiddle().y > 400 || isMoving == false){
-        document.getElementById("rotateButton").innerHTML = "Start";
-        isMoving = false;
-        return;
-    }
-    rotateSquare();
-    window.setTimeout(drawSquare, 20);
 }
 
 function rotateSquare(){
@@ -90,11 +104,12 @@ function rotateSquare(){
 }
 
 
-function CalculateSquareAngles(a, c){
+function CalculateSquareAngles(p1, p2){
 
-    let b = new Coordinate((a.x + c.x + a.y - c.y)/2, (c.x - a.x + a.y + c.y)/2);
-
-    let d = new Coordinate((a.x + c.x + c.y - a.y)/2, (a.x - c.x + a.y + c.y)/2);
+    let a = new Coordinate(p1.x, p1.y);
+    let c = new Coordinate(p2.x, p2.y);
+    let b = new Coordinate((p1.x + p2.x + p1.y - p2.y)/2, (p2.x - p1.x + p1.y + p2.y)/2);
+    let d = new Coordinate((p1.x + p2.x + p2.y - p1.y)/2, (p1.x - p2.x + p1.y + p2.y)/2);
 
     return new Square(a,b,c,d);
 }

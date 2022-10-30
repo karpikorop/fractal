@@ -1,5 +1,6 @@
 :root{
     --secondary-color: #6c757d;
+    --secondary-color2:rgba(255, 255, 255, 0.55);
 }
 .mainDiv {
     margin-inline: auto;
@@ -176,10 +177,12 @@ input[type="number"] {
 .helpLink {
     color: var(--secondary-color);
     text-decoration-color: var(--secondary-color);
+    transition: 0.2s;
+    
 }
 a.helpLink:hover {
-    color: var(--secondary-color);
-    text-decoration: none;
+    cursor: pointer;
+    color: white;
 }
 .yakor {
     margin: auto;
@@ -291,3 +294,84 @@ input[type="range"]::-webkit-slider-thumb {
 body.inheritCursors * {
     cursor: inherit !important;
 }
+.tabsMain{
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    width: min(100% - 2rem, 70rem);
+    margin-top: 5em;   
+}
+.tabs{
+    overflow-y: auto;
+    max-height: 80vh;
+    width: 16rem;
+    color: white;
+}
+.tabs::-webkit-scrollbar {
+    margin-left: 0px;
+    width: 0px;
+}
+.tablink{
+    height: 4em;
+    width: 10rem;
+    text-align: left;
+    padding-left: 1rem;
+    background-color: inherit;
+    color: var(--secondary-color2);
+    transition: 0.2s;
+    background: inherit;
+    border: none;
+    outline: none;
+}
+.tablink span{
+    color: white;
+}
+.tabContent{
+    color: var(--secondary-color2);
+    height: 80vh;
+    width: 100%;
+    padding: 2em 1em 2em 4em;
+    border-left: 1px solid white;
+}
+.tabContent h1, h2, h3, h4, h5{
+    color: white;
+}
+.choosedTab{
+    color: white;
+    background: inherit;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    background-color: inherit;
+    transform: scale(1.10);
+}
+.tabText{
+    padding-right: 1em;
+    overflow-y: auto;
+    max-height: 100%;
+}
+.tabText p {
+    font-size:larger
+}
+li{
+    font-size: larger;
+    margin-bottom: 1em;
+}
+
+
+
+
+::-webkit-scrollbar {
+    margin-left: 10px;
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: inherit; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border-radius: 1em;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(186, 186, 186); 
+  }

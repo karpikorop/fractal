@@ -4,6 +4,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="sprites/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+        
     </head>
     <body class="bg-black">
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
@@ -31,6 +32,135 @@
             </div>
         </nav>
 
+
+        <div class="tabsMain">
+        <div class="tabs">
+            <div class="tablink" style="height: 5em; display: flex;"><span class="fs-3 fw-bold" style="margin: auto; width: 100%;">Help</span></div>
+            <button class="tablink choosedTab" onclick="openTab(this, 'fractalTab')">Fractals</button>
+            <button class="tablink" onclick="openTab(this, 'colorTab')">Color models</button>
+            <button class="tablink" onclick="openTab(this, 'affineTab')">Move Shapes</button>
+        </div>
+          
+        <div class="tabContent">
+            
+          
+            <div id="fractalTab" class="tabText" >
+              <h2>Build Fractals</h2>
+              <p>Build mandelbrot fractal with different colors.</p>
+
+              <p class="fw-light">   Using Build Fractals tool you can build Mandelbrot Set with different color palette and number of iterations. You also can zoom fractal by clicking on the point you whant to zoom with your mouse. Let's talk about all functions available and how do they work.</p>
+
+            <div style="width: 100%; display: flex; flex-wrap: wrap; margin: 2em 0 2em 0;">
+                <img src="sprites/help/fractal/fractalMenu.png" width="100%" alt="img" style="margin-inline: auto">
+                <span class="fw-medium fs-5"style="margin-inline: auto;">Build Fractal Menu</span>
+            </div>
+                <h3 style="width: 100%; text-align:center; margin-top: 3em;">Change number of Iterations</h3>
+                <div style="width: 50%; display: block; margin: 2em 0 2em 0;">
+                    <img src="sprites/help/fractal/iterations.png" width="100%" alt="img" style="margin-inline: auto; " >
+                </div>
+                <p class="fw-light">The program has to do some computation to decide whether a point belongs to the mandelbrot set. The Number of Iterations setting tells how much work it will do before giving up and making decision. The more iterations are performed, the more accurate the drawing will be. We recommend to set from 25 to 100 iterations.</p>
+            
+
+                <h3 style="width: 100%; text-align:center; margin-top: 3em;">Change color palette</h3>
+                <div style="width: 40%; display: block; margin: 2em 0 2em 0;">
+                    <img src="sprites/help/fractal/colorPicker.png" width="100%" alt="img" style="margin-inline: auto; " >
+                </div>
+                <p class="fw-light">In order to add some colors, we could associate a color for each possible value of iterations. In this tool, we are switching from RGB colors to HSL (hue, saturation, lightness) colors. This allows us to change the color easily by modifying only the hue. The colors in the images are arbitrary. The set of colors that are used is called the "palette". Using Color picker you can choose outer and inner color of madelbrot set.</p>
+
+
+                <h3 style="width: 100%; text-align:center; margin-top: 3em;">Zoom</h3>
+                <div style="width: 40%; display: block; margin: 2em 0 2em 0;">
+                    <img src="sprites/help/fractal/zoom.png" width="100%" alt="img" style="margin-inline: auto; " >
+                </div>
+                <p class="fw-light">After you drawed Mandelbrot Set you can click on it to zoom in. The point where you clicked will be moved to the center of the image and fractal will be scaled by 2 times. As you zoom, you might need to increase number of iterations.</p>
+            </div>
+          
+
+
+
+
+
+            <div id="colorTab" class="tabText" style="display:none">
+                <h2>Change Color Model</h2>
+                <p>See transition from one color model to another.</p>
+  
+                <p class="fw-light">A color model is a system that helps us to define and describe colors through numerical values. Using Color Model tool you can change color models of your image between RGB, CMYK and HSL. Is is also available tp change lightness in HSL color model.</p>
+  
+              <div style="width: 100%; display: flex; flex-wrap: wrap; margin: 2em 0 2em 0;">
+                  <img src="sprites/help/color/colorMenu.png" width="100%" alt="img" style="margin-inline: auto">
+                  <span class="fw-medium fs-5"style="margin-inline: auto;">Change Color Model Menu</span>
+              </div>
+
+
+                  <h3 style="width: 100%; text-align:center; margin-top: 3em;">Import Image</h3>
+                  <div style="width: 50%; display: block; margin: 2em 0 2em 0;">
+                      <img src="sprites/help/color/importImage.png" width="100%" alt="img" style="margin-inline: auto; " >
+                  </div>
+                  <p class="fw-light">To change different color models you need to import Image you want to work with. You can either load image from your computer or import from URL link (currently unavailable).</p>
+              
+  
+                  <h3 style="width: 100%; text-align:center; margin-top: 3em;">Change color model</h3>
+                  <div style="width: 40%; display: block; margin: 2em 0 2em 0;">
+                      <img src="sprites/help/color/colorModel.png" width="100%" alt="img" style="margin-inline: auto; " >
+                  </div>
+                  <p class="fw-light">In Color model tool 3 color models are available: RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black) and HSL (Hue, Saturation, Lightness). You can change them by clicking on color model you want to see. Program will calculate every pixel of your image and change it color model.</p>
+  
+  
+                  <h3 style="width: 100%; text-align:center; margin-top: 3em;">Zoom</h3>
+                  <div style="width: 40%; display: block; margin: 2em 0 2em 0;">
+                      <img src="sprites/help/color/lightness.png" width="100%" alt="img" style="margin-inline: auto; " >
+                  </div>
+                  <p class="fw-light">The HSL model is very similar to the RGB color model. The difference lies in how colors are expressed numerically.
+
+                    The hue determines which basic color it is. Saturation and luminance tell more about the variations of these basic colors. Finally, lightness refers to the "whiteness" of the color. It may also be termed "brightness", "value" or "intensity." By draging ligtness slider you can change the lightness in your image. It works only using HSL color model.</p>
+            </div>
+          
+
+
+
+
+
+
+            <div id="affineTab" class="tabText" style="display:none">
+                <h2>Move Shapes</h2>
+                <p>Moving shapes using affine transformation.</p>
+  
+                <p class="fw-light">Affine transformation is a linear mapping method that preserves points, straight lines, and planes. Sets of parallel lines remain parallel after an affine transformation. The affine transformation technique is typically used to correct for geometric distortions or deformations that occur with non-ideal camera angles. Move Shapes tool alows you to move and rotate square using affine transformations.</p>
+  
+              <div style="width: 100%; display: flex; flex-wrap: wrap; margin: 2em 0 2em 0;">
+                  <img src="sprites/help/affine/affineMenu.png" width="100%" alt="img" style="margin-inline: auto">
+                  <span class="fw-medium fs-5"style="margin-inline: auto;">Affine Transformation Menu</span>
+              </div>
+
+
+                  <h3 style="width: 100%; text-align:center; margin-top: 3em;">Form a Square</h3>
+                  <div style="width: 50%; display: block; margin: 2em 0 2em 0;">
+                      <img src="sprites/help/affine/squareForm.png" width="100%" alt="img" style="margin-inline: auto; " >
+                  </div>
+                  <p class="fw-light">To build a shape you should give two diagonally opposite points A(x, y) and C(x, y) of a square. Program will find out the other two points in terms of the known coordinates using this formulas</p>
+                  <img src="sprites/help/affine/formula.png" width="50%" alt="img" style="margin-inline: auto;">
+              
+  
+                  <h3 style="width: 100%; text-align:center; margin-top: 3em;">Change shape color</h3>
+                  <div style="width: 40%; display: block; margin: 2em 0 2em 0;">
+                      <img src="sprites/help/affine/colorChange.png" width="100%" alt="img" style="margin-inline: auto; " >
+                  </div>
+                  <p class="fw-light">Using color picker you can change shape color.</p>
+  
+  
+                  <h3 style="width: 100%; text-align:center; margin-top: 3em;">Stop Image</h3>
+                  <div style="width: 40%; display: block; margin: 2em 0 2em 0;">
+                      <img src="sprites/help/affine/stop.png" width="100%" alt="img" style="margin-inline: auto; " >
+                  </div>
+                  <p class="fw-light">After starting square movement using "Start" button you can use same button to Stop movement in any postion.</p>
+            </div>
+          
+        </div>
+    </div>
+
+
+
         <script src="js/bootstrap.js"></script>
+        <script src="js/help.js"></script>
     </body>
 </html>

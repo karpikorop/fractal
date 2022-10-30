@@ -31,6 +31,154 @@
             </div>
         </nav>
 
+
+        <div class="tabsMain">
+            <div class="tabs">
+                <div class="tabheader" style="height: 5em; display: flex;"><span class="fs-3 fw-bold" style="margin: auto; width: 100%;">Fractals</span></div>
+                <button class="tablink choosedTab" onclick="openTab(this, 'fl1')">Lesson 1</button>
+                <button class="tablink" onclick="openTab(this, 'fl2')">Lesson 2</button>
+                <button class="tablink" onclick="openTab(this, 'fl3')">Lesson 3</button>
+
+
+
+                <div class="tabheader" style="height: 5em; display: flex;"><span class="fs-3 fw-bold" style="margin: auto; width: 100%;">Color Models</span></div>
+                <button class="tablink" onclick="openTab(this, 'cl1')">Lesson 1</button>
+                <button class="tablink" onclick="openTab(this, 'cl2')">Lesson 2</button>
+                <button class="tablink" onclick="openTab(this, 'cl3')">Lesson 3</button>
+
+
+
+                <div class="tabheader" style="height: 5em; display: flex; flex-wrap: wrap;"><span class="fs-3 fw-bold" style="margin: auto; width: 100%;">Affine</span><span class="fs-5 fw-bold" style="margin: auto; width: 100%;">Transformations</span></div>
+                <button class="tablink" onclick="openTab(this, 'al1')">Lesson 1</button>
+                <button class="tablink" onclick="openTab(this, 'al2')">Lesson 2</button>
+                <button class="tablink" onclick="openTab(this, 'al3')">Lesson 3</button>
+            </div>
+              
+            <div class="tabContent">
+                
+                
+                <div id="fl1" class="tabText" >
+                  <h2>Lesson 1. What are Fractals?</h2>
+                  <img src="https://media.tenor.com/FBMvt78yfZIAAAAd/fractal.gif" width="60%" alt="Mandelbrot" style="margin: 2em auto 2em auto; ">
+                  <p>A Fractal is a type of mathematical shape that are infinitely complex. In essence, a Fractal is a pattern that repeats forever, and every part of the Fractal, regardless of how zoomed in, or zoomed out you are, it looks very similar to the whole image.</p>
+                  <p>Fractals surround us in so many different aspects of life. Since the term is becoming more widely used we wanted to create the definitive guide to understanding what Fractals are, why Fractals are important, and how Fractals impact our lives. This Ultimate Guide to Fractals will address common questions like: What is a Fractal? How do fractals work? What are Fractals used for? and much more.</p>
+                  <br>
+                  <h3>Fractals in Nature</h3>
+                  <p>Once the basic concept of a Fractal is understood, it is shocking to see how many unique types of Fractals exist in nature. Some of the most common examples of Fractals in nature would include branches of trees, animal circulatory systems, snowflakes, lightning and electricity, plants and leaves, geographic terrain and river systems, clouds, crystals.</p>
+                  <h5>Fractal Trees:</h5>
+                  <p>Fractals are seen in the branches of trees from the way a tree grows limbs. The main trunk of the tree is the origin point for the Fractal and each set of branches that grow off of that main trunk subsequently have their own branches that continue to grow and have branches of their own. This cycle creates an “infinite” pattern of tree branches. Each branch of the tree resembles a smaller scale version of the whole shape.</p>
+                  <img src="https://www.optimistdaily.com/wp-content/uploads/shutterstock_1713614590-scaled-e1647020289647.jpg" width="60%" alt="Mandelbrot" style="margin: 1em auto 1em auto; ">
+
+                  
+                  <h5>Fractal Snowflakes:</h5>
+                  <p>We've all heard that every snowflake is unique and one of the contributing factors to the uniqueness of snowflakes is that they form in Fractal patterns which can allow for incredible amounts of detail and also variation. In the case of ice crystal formations, the starting point of the Fractal is in the center and the shape expands outward in all directions. As the crystal expands, the Fractal structures are formed in each direction. Just like the other examples of Fractals we have shared above, each iteration of the shape gets smaller and more detailed, which also contributes to the overall complexity of the shape.</p>
+                  <img src="https://d2cbg94ubxgsnp.cloudfront.net/Pictures/2000xAny/3/9/0/134390_shutterstock_634141013_hero.jpg" width="80%" alt="Mandelbrot" style="margin: 1em auto 1em auto; ">
+
+                  <h5>Fractal Lightning and Electricity:</h5>
+                  <p>If you've ever watched a lightning storm, you're getting a front row show to one of nature's most powerful displays of Fractals. When electricity passes through a medium that does not conduct electricity well (like air) the pattern that is created becomes Fractal. The reason this phenomenon forms is because of how the electricity interacts with the air. As the current passes through the air, it becomes superheated. Superheating of the air changes its electrical conductivity and allows the current to fragment out. This process repeats for each level of fragmentation and soon you get a Fractal. You'll notice that if you invert an image of a lightning strike or electrical discharge, you'll see great resemblance to a tree. This is because both are Fractals.</p>
+                  <img src="https://art.ngfiles.com/images/145000/145756_tdwkiller_fractal-lightning.jpg?f1293920724" width="80%" alt="Mandelbrot" style="margin: 1em auto 1em auto; ">
+
+                  <p>While Fractals surround us in so many different ways, there are physical limitations as to how deep we can go in examining the fractals seen in the physical world. Eventually if we zoom in far enough we will see individual molecules and no longer be able to see the fractal pattern. In computers the story is a bit different. Computers have unlocked our ability to explore fractals at an incredibly detailed level, and because fractals are derived from mathematical equations, we can explore these shapes at an infinity deep level.</p>
+
+                  <p style="text-align: right; width: 100%; margin: 0; cursor: inherit;"><a class="helpLink" onclick="nextTab(1, 'fl2')">Next Lesson -></a></p>
+
+                </div>
+
+              
+                <div id="fl2" class="tabText" style="display:none">
+                    <h2>Fractal Types</h2>
+                    <p>A mathematical fractal is based on an equation that undergoes iteration, a form of feedback based on recursion.</p>
+                    <h3>Generating Fractals</h3>
+                    <p>Four common techniques for generating fractals are:</p>
+                    <ui>
+                        <li><b style="color: white;">Escape-time fractals</b> — (also known as "orbits" fractals) These are defined by a formula or recurrence relation at each point in a space (such as the complex plane). Examples of this type are the Mandelbrot set, Julia set, the Burning Ship fractal, the Nova fractal and the Lyapunov fractal. The 2d vector fields that are generated by one or two iterations of escape-time formulae also give rise to a fractal form when points (or pixel data) are passed through this field repeatedly.</li>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Escape_Time_Algorithm_bands.png" width="65%" alt="Mandelbrot" style="margin: 1em auto 1em auto; ">
+                        <li><b style="color: white;">Iterated function systems</b> — These have a fixed geometric replacement rule. Cantor set, Sierpinski carpet, Sierpinski gasket, Peano curve, Koch snowflake, Harter-Heighway dragon curve, T-Square, Menger sponge, are some examples of such fractals.</li>
+                        <img src="https://overlordoftheuberferal.files.wordpress.com/2020/09/sierpinski_triangle_to_jaws-anim.gif" width="65%" alt="Mandelbrot" style="margin: 1em auto 1em auto; ">
+                        <li><b style="color: white;">Random fractals</b> — Generated by stochastic rather than deterministic processes, for example, trajectories of the Brownian motion, Lévy flight, fractal landscapes and the Brownian tree. The latter yields so-called mass- or dendritic fractals, for example, diffusion-limited aggregation or reaction-limited aggregation clusters.</li>
+                        <img src="https://miro.medium.com/max/1400/0*m0KZVqeP6guOV9gk." width="50%" alt="Mandelbrot" style="margin: 1em auto 1em auto; ">
+                        <li><b style="color: white;">Strange attractors</b> — Generated by iteration of a map or the solution of a system of initial-value differential equations that exhibit chaos.</li>
+                        <img src="https://www.cedrick.ai/images/3-doublescroll.png" width="50%" alt="Mandelbrot" style="margin: 1em auto 1em auto; ">
+                    </ui>
+                    <p style="width: 100%; margin: 0; cursor: inherit; display: flex; justify-content: space-between;"><a class="helpLink" onclick="nextTab(0, 'fl1')"><- Previous Lesson</a><a class="helpLink" onclick="nextTab(2, 'fl3')">Next Lesson -></a></p>
+                </div>
+              
+                <div id="fl3" class="tabText" style="display:none">
+                    <h2>The Mandelbrot Set</h2>
+                    <p>Essentially, the Mandelbrot set is generated by iterating a simple function on the points of the complex plane. The points that produce a cycle (the same value over and over again) fall in the set, whereas the points that diverge (give ever-growing values) lie outside it. When plotted on a computer screen in many colors (different colors for different rates of divergence), the points outside the set can produce pictures of great beauty. The boundary of the Mandelbrot set is a fractal curve of infinite complexity, any portion of which can be blown up to reveal ever more outstanding detail, including miniature replicas of the whole set itself.</p>
+                    <img src="https://math.hws.edu/eck/js/mandelbrot/too-few-iterations.png" width="30%" alt="Mandelbrot" style="margin: 0em auto 1em 2em; ">
+                    <img src="https://math.hws.edu/eck/js/mandelbrot/enough-iterations.png" width="30%" alt="Mandelbrot" style="margin: 0em auto 1em 2em; ">
+                    <p>The Mandelbrot set is certainly the most popular fractal, and perhaps the most popular object of contemporary mathematics of all. Since Benoît B. Mandelbrot (1924-2010) discovered it in 1979-1980, while he was investigating the mapping z → z<sup>2</sup>+c, it has been duplicated by tens of thousands of people around the world.</p>
+
+                    
+                    <h3>Constructing the Mandelbrot Set</h3>
+                    <p>Here is how the Mandelbrot set is constructed. Take a starting point z<sub>0</sub> in the complex plane. Then we use the quadratic recurrence equation</p>
+                    <img src="sprites/lessons/mandelbrotFormula.png" width="30%" alt="Mandelbrot" style="margin: 0em auto 1em auto; ">
+                    <p>to obtain a sequence of complex numbers z<sub>n</sub> with n=0,1,2,…. The points zn are said to form the orbit of z<sub>0</sub>, and the Mandelbrot set, denoted by <var>M</var>, is defined as follows: If the orbit zn fails to go to infinity, we say that z<sub>0</sub> is contained within the set <var>M</var>. If the orbit zn does go to infinity, we say that the point z<sub>0</sub> is outside <var>M</var>.</p>
+                    
+                    
+                    <h3>Coloring the Mandelbrot Set</h3>
+                    <p>In the previous applet the Mandelbrot set is sketched using only one single point. However, it is possible to plot it considering a particular region of pixels on the screen. The simplest algorithm for generating a representation of the Mandelbrot set is known as the escape time algorithm. A repeating calculation is performed for each x, y point in the plot area and based on the behavior of that calculation, a color is chosen for that pixel.</p>
+                    <img src="https://blog.stratio.com/wp-content/uploads/2017/06/fractal.jpg" width="40%" alt="Mandelbrot" style="margin: 0em auto 1em 2em; ">
+                    <p>In the provided tool, the HSL color scheme is used and depends on the distance from point z<sub>0</sub> (in exterior or interior) to nearest point on the boundary of the Mandelbrot set. In other words, provided that the maximal number of iterations is sufficiently high, we can obtain a picture of the Mandelbrot set with the following properties:</p>
+                    <ui>
+                        <li>Every pixel that contains a point of the Mandelbrot set is colored static color.</li>
+                        <li>Every pixel that does not cotain a point of the Mandelbrot set is colored using hue values depending on how close that point is to the Mandelbrot set.</li>
+                    </ui>
+
+                    <h3>Mandelbrot Map</h3>
+                    <img src="https://pbs.twimg.com/media/EVWJT4JVAAAef0r.jpg" width="95%" alt="Mandelbrot" style="margin: 0em auto 1em auto; ">
+
+                    <p style="width: 100%; margin: 0; cursor: inherit; display: flex; justify-content: space-between;"><a class="helpLink" onclick="nextTab(1, 'fl2')"><- Previous Lesson</a><a class="helpLink" onclick="nextTab(3, 'cl1')">Next Lesson -></a></p>
+
+
+                </div>
+              
+
+
+                <div id="cl1" class="tabText" style="display:none">
+                    <h2>Build Fractals</h2>
+                    <p>Build mandelbrot fractal with different colors.</p>
+                </div>
+                
+                <div id="cl2" class="tabText" style="display:none">
+                    <h2>Change Color Model</h2>
+                    <p>See transition from one color model to another.</p>
+                </div>
+                
+                <div id="cl3" class="tabText" style="display:none">
+                    <h2>Move Shapes</h2>
+                    <p>Moving shapes using affine transformation.</p>
+                </div>
+
+
+                <div id="al1" class="tabText" style="display:none">
+                    <h2>Build Fractals</h2>
+                    <p>Build mandelbrot fractal with different colors.</p>
+                </div>
+                
+                <div id="al2" class="tabText" style="display:none">
+                    <h2>Change Color Model</h2>
+                    <p>See transition from one color model to another.</p>
+                </div>
+                
+                <div id="al3" class="tabText" style="display:none">
+                    <h2>Move Shapes</h2>
+                    <p>Moving shapes using affine transformation.</p>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="js/lessons.js"></script>
         <script src="js/bootstrap.js"></script>
     </body>
 </html>
