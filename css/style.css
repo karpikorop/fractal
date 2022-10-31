@@ -265,7 +265,7 @@ a.helpLink:hover {
 input:focus {
     outline: none;
 }
-[type="radio"] {
+.btn-group [type="radio"] {
     display: none;
 }
 .range {
@@ -357,9 +357,30 @@ li{
     font-size: larger;
     margin-bottom: 1em;
 }
-
-
-
+#colorCheck{
+    border: 1px solid;
+    background-color: white;
+}
+.quiz{
+    font-size: large;
+}
+.quiz [type="radio"]{
+    
+    display: none;
+}
+.quizRadio{
+    margin-right: 0.3em;
+    vertical-align:middle;
+}
+.quizLabel{
+    font-size: larger;
+    margin: 1em 0 1em 1em;
+}
+.question{
+    margin-top: 2em;
+    font-size: 1.5em;
+    font-weight: 200;
+}
 
 ::-webkit-scrollbar {
     margin-left: 10px;
